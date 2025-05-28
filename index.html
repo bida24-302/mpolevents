@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome to Mpole's Events - Elegant Catering & Decoration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('photos/food.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #fff5f5 0%, #fff0f0 100%);
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(251, 182, 206, 0.3);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #f9a8d4;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #f9a8d4 0%, #f472b6 100%);
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #f472b6 0%, #f9a8d4 100%);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(135deg, #fbcfe8 0%, #f9a8d4 100%);
+        }
+        
+        .btn-secondary:hover {
+            background: linear-gradient(135deg, #f9a8d4 0%, #fbcfe8 100%);
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 60%;
+            height: 3px;
+            bottom: -8px;
+            left: 0;
+            background: linear-gradient(90deg, #f9a8d4 0%, #fbcfe8 50%, #f9a8d4 100%);
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="font-sans bg-pink-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-gradient-to-r from-pink-400 to-pink-600 rounded-full flex items-center justify-center mr-3">
+                        <i class="fas fa-utensils text-white text-xl"></i>
+                    </div>
+                    <h1 class="text-2xl font-bold text-gray-800">Mpole's <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-pink-700">Events</span></h1>
+                </div>
+                
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-pink-500 font-medium">Home</a>
+                    <a href="services.html" class="nav-link text-gray-700 hover:text-pink-500 font-medium">Services</a>
+                    <a href="about.html" class="nav-link text-gray-700 hover:text-pink-500 font-medium">About Us</a>
+                    <a href="gallery.html" class="nav-link text-gray-700 hover:text-pink-500 font-medium">Gallery</a>
+                    <a href="contact.html" class="nav-link text-gray-700 hover:text-pink-500 font-medium">Contact</a>
+                </nav>
+                
+                <div class="md:hidden">
+                    <button class="text-gray-700 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center justify-center text-center text-white px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">Your Dream Event, <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-pink-500">Perfectly Styled</span></h2>
+            <p class="text-xl md:text-2xl mb-8 leading-relaxed">From intimate gatherings to grand celebrations, we craft unforgettable experiences through exquisite catering and breathtaking decorations.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="services.html" class="btn-primary text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                    Explore Services <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+                <a href="contact.html" class="bg-transparent border-2 border-white hover:bg-white hover:text-pink-600 text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                    Get a Quote
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <img src="https://images.unsplash.com/photo-1555244162-803834f70033?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Catering Service" 
+                         class="rounded-lg shadow-xl w-full h-auto object-cover">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="section-title text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                        Crafting <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-pink-600">Memorable</span> Experiences
+                    </h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        At Mpole's Events, we blend culinary artistry with creative design to transform your vision into reality. Our decade-long journey has been dedicated to perfecting the art of celebration, one event at a time.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Whether it's a wedding that tells your love story, a corporate event that impresses, or a birthday that delights, our team of passionate professionals ensures every detail reflects your personality and exceeds expectations.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="about.html" class="btn-primary text-white font-bold py-3 px-6 rounded-full transition duration-300 shadow-md">
+                            Our Story <i class="fas fa-book-open ml-2"></i>
+                        </a>
+                        <a href="gallery.html" class="btn-secondary text-white font-bold py-3 px-6 rounded-full transition duration-300 shadow-md">
+                            View Gallery <i class="fas fa-images ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Highlights -->
+    <section class="py-20 bg-pink-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="section-title text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    Our <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-pink-700">Signature</span> Services
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Comprehensive solutions tailored to make your event seamless and spectacular
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-pink-300">
+                    <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-utensils text-pink-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Gourmet Catering</h3>
+                    <p class="text-gray-600 mb-4">
+                        From canapés to five-course meals, our culinary team creates flavors that delight every palate with locally-sourced, seasonal ingredients.
+                    </p>
+                    <a href="#" class="text-pink-500 font-medium inline-flex items-center">
+                        Learn more <i class="fas fa-chevron-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-pink-300">
+                    <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-paint-brush text-pink-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Event Design</h3>
+                    <p class="text-gray-600 mb-4">
+                        Transform your venue into a breathtaking space with our custom floral arrangements, lighting designs, and thematic decor concepts.
+                    </p>
+                    <a href="#" class="text-pink-500 font-medium inline-flex items-center">
+                        Learn more <i class="fas fa-chevron-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-pink-300">
+                    <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-calendar-check text-pink-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Full Planning</h3>
+                    <p class="text-gray-600 mb-4">
+                        Comprehensive event coordination including vendor management, timeline creation, and on-site execution for stress-free celebrations.
+                    </p>
+                    <a href="#" class="text-pink-500 font-medium inline-flex items-center">
+                        Learn more <i class="fas fa-chevron-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="section-title text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    Voices of <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-pink-600">Delighted</span> Clients
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Don't just take our word for it - hear from those who've experienced our services
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="testimonial-card p-8 rounded-xl shadow-md border-l-4 border-pink-400">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-quote-left text-pink-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Debbie Mabulana</h4>
+                            <div class="flex text-pink-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">
+                        "The catering was simply amazing! Our guests couldn't stop raving about the food. The decorations transformed our venue into a magical space that perfectly matched our vision. Mpole's team handled every detail with such care and professionalism."
+                    </p>
+                    <p class="text-sm text-gray-500">
+                        Wedding Reception • June 2023
+                    </p>
+                </div>
+                
+                <div class="testimonial-card p-8 rounded-xl shadow-md border-l-4 border-pink-400">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-quote-left text-pink-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Mark Thapi</h4>
+                            <div class="flex text-pink-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">
+                        "Everything was perfect! The team anticipated needs we didn't even know we had. Our corporate gala was elevated to another level thanks to their innovative food stations and stunning centerpieces that became conversation starters."
+                    </p>
+                    <p class="text-sm text-gray-500">
+                        Corporate Gala • March 2023
+                    </p>
+                </div>
+                
+                <div class="testimonial-card p-8 rounded-xl shadow-md border-l-4 border-pink-400">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-quote-left text-pink-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Masego K. Dira</h4>
+                            <div class="flex text-pink-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">
+                        "We couldn't have asked for a better 50th anniversary celebration. The food was delicious, the decorations breathtaking, and the service impeccable. They captured our family's essence perfectly and created memories we'll cherish forever."
+                    </p>
+                    <p class="text-sm text-gray-500">
+                        50th Anniversary • December 2022
+                    </p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="contact.html" class="btn-primary text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg">
+                    Start Planning Your Event <i class="fas fa-calendar-alt ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-gradient-to-r from-pink-500 to-pink-400 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Create Something <span class="text-white">Extraordinary</span>?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Let's discuss how we can make your next event truly unforgettable
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="tel:+1234567890" class="bg-white hover:bg-gray-100 text-pink-600 font-bold py-3 px-8 rounded-full transition duration-300 shadow-md">
+                    <i class="fas fa-phone mr-2"></i> Call Us Now
+                </a>
+                <a href="contact.html" class="bg-transparent border-2 border-white hover:bg-white hover:text-pink-500 font-bold py-3 px-8 rounded-full transition duration-300">
+                    Send a Message <i class="fas fa-envelope ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-r from-pink-400 to-pink-600 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-utensils text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Mpole's <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-pink-300">Events</span></h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Creating memorable experiences through exceptional catering and decoration services since 2010.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-pink-400 transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-pink-400 transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-pink-400 transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-pink-400 transition duration-300">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-pink-400 transition duration-300">Home</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-pink-400 transition duration-300">Services</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-pink-400 transition duration-300">About Us</a></li>
+                        <li><a href="gallery.html" class="text-gray-400 hover:text-pink-400 transition duration-300">Gallery</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-pink-400 transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Our Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-pink-400 transition duration-300">Wedding Catering</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-400 transition duration-300">Event Decorations</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-400 transition duration-300">Corporate Events</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-400 transition duration-300">Private Parties</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-400 transition duration-300">Full Event Planning</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-pink-400 mt-1 mr-3"></i>
+                            <span class="text-gray-400">Plot 7812 Muchudi, Botswana</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-pink-400 mr-3"></i>
+                            <span class="text-gray-400">+267 72427343</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-pink-400 mr-3"></i>
+                            <span class="text-gray-400">debbietsholofelo@gmail.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock text-pink-400 mr-3"></i>
+                            <span class="text-gray-400">Mon-Fri: 9AM - 6PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">
+                    &copy; 2025 Mpole's Events. All rights reserved.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-pink-400 transition duration-300">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-pink-400 transition duration-300">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-pink-400 transition duration-300">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation for elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateElements = document.querySelectorAll('.animate-fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            animateElements.forEach(element => {
+                element.classList.add('opacity-0', 'translate-y-10', 'transition', 'duration-500', 'ease-out');
+                observer.observe(element);
+            });
+            
+            // Mobile menu toggle would go here
+            const mobileMenuButton = document.querySelector('.md\\:hidden button');
+            mobileMenuButton.addEventListener('click', function() {
+                // Implement mobile menu toggle functionality
+                console.log('Mobile menu clicked');
+            });
+        });
+    </script>
+</body>
+</html>

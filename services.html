@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Mpole's Events</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary: #f472b6;
+            --secondary: #f9a8d4;
+            --accent: #d3869b;
+            --dark: #2a2a2a;
+            --light: #fff9fb;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light);
+            color: #5c5c5c;
+            scroll-behavior: smooth;
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(249, 168, 212, 0.6);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(249, 168, 212, 0.2);
+        }
+        
+        .service-card:hover .feature-icon {
+            background-color: var(--primary);
+            transform: rotate(15deg);
+        }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <div class="container mx-auto px-6 py-4">
+          <div class="flex items-center justify-between">
+              <div class="flex items-center">
+                  <div class="w-12 h-12 bg-gradient-to-r from-pink-400 to-pink-600 rounded-full flex items-center justify-center mr-3">
+                      <i class="fas fa-utensils text-white text-xl"></i>
+                  </div>
+                  <h1 class="text-2xl font-bold text-gray-800">Mpole's <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-pink-700">Events</span></h1>
+              </div>
+              
+              <nav class="hidden md:flex space-x-8">
+                  <a href="index.html" class="nav-link text-gray-700 hover:text-pink-500 font-medium">Home</a>
+                  <a href="services.html" class="nav-link text-gray-700 hover:text-pink-500 font-medium">Services</a>
+                  <a href="about.html" class="nav-link text-gray-700 hover:text-pink-500 font-medium">About Us</a>
+                  <a href="gallery.html" class="nav-link text-gray-700 hover:text-pink-500 font-medium">Gallery</a>
+                  <a href="contact.html" class="nav-link text-gray-700 hover:text-pink-500 font-medium">Contact</a>
+              </nav>
+              
+              <div class="md:hidden">
+                  <button class="text-gray-700 focus:outline-none">
+                      <i class="fas fa-bars text-2xl"></i>
+                  </button>
+              </div>
+          </div>
+      </div>
+  </header>
+
+    <!-- Hero -->
+    <section class="bg-gradient-to-r from-gray-900 to-gray-700 bg-blend-overlay bg-cover bg-center min-h-[60vh] flex items-center" style="background-image: url('https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')">
+        <div class="container mx-auto px-4 text-center text-white">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 animate-fade-in-up">Our <span class="text-gradient">Services</span></h1>
+            <p class="text-xl md:text-2xl mb-8 animate-fade-in-up delay-100">Discover how we can make your event truly unforgettable</p>
+            <a href="#services" class="btn-primary text-white font-semibold py-3 px-8 rounded-full inline-block animate-fade-in-up delay-200">
+                Explore Services <i class="fas fa-arrow-down ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center relative inline-block">
+                Our <span class="text-gradient">Offerings</span>
+                <span class="absolute bottom-0 left-0 w-1/2 h-1 bg-gradient-to-r from-secondary via-pink-200 to-secondary rounded-full"></span>
+            </h2>
+            <p class="text-center max-w-2xl mx-auto mb-12">At Mpole's Events, we specialize in creating magical moments through our comprehensive event services.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Wedding Catering -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 animate-fade-in-up" style="animation-delay: 0.2s">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Wedding Catering" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-accent">Wedding Catering</h3>
+                        <p class="text-gray-600 mb-4">Exquisite culinary experiences crafted by our award-winning chefs using the freshest local ingredients.</p>
+                        
+                        <div class="space-y-3 mb-5">
+                            <div class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-secondary text-white flex items-center justify-center mr-2 transition-all duration-300">
+                                    <i class="fas fa-check text-xs"></i>
+                                </div>
+                                <span>Custom menu planning</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-secondary text-white flex items-center justify-center mr-2 transition-all duration-300">
+                                    <i class="fas fa-check text-xs"></i>
+                                </div>
+                                <span>Dietary accommodations</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-secondary text-white flex items-center justify-center mr-2 transition-all duration-300">
+                                    <i class="fas fa-check text-xs"></i>
+                                </div>
+                                <span>Professional serving staff</span>
+                            </div>
+                        </div>
+                        
+                        <a href="#catering" class="btn-primary text-white font-semibold py-2 px-6 rounded-full inline-block text-sm">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Event Decorations -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 animate-fade-in-up" style="animation-delay: 0.4s">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1519671488599-5b6a7a7f5838?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Event Decorations" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-accent">Event Decorations</h3>
+                        <p class="text-gray-600 mb-4">Transform any space into a breathtaking setting with our creative and elegant decor solutions.</p>
+                        
+                        <div class="space-y-3 mb-5">
+                            <div class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-secondary text-white flex items-center justify-center mr-2 transition-all duration-300">
+                                    <i class="fas fa-check text-xs"></i>
+                                </div>
+                                <span>Theme development</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-secondary text-white flex items-center justify-center mr-2 transition-all duration-300">
+                                    <i class="fas fa-check text-xs"></i>
+                                </div>
+                                <span>Floral arrangements</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-secondary text-white flex items-center justify-center mr-2 transition-all duration-300">
+                                    <i class="fas fa-check text-xs"></i>
+                                </div>
+                                <span>Lighting design</span>
+                            </div>
+                        </div>
+                        
+                        <a href="#decorations" class="btn-primary text-white font-semibold py-2 px-6 rounded-full inline-block text-sm">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Wedding Planning -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 animate-fade-in-up" style="animation-delay: 0.6s">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Wedding Planning" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-accent">Wedding Planning</h3>
+                        <p class="text-gray-600 mb-4">Comprehensive wedding planning services to bring your dream wedding to life, stress-free.</p>
+                        
+                        <div class="space-y-3 mb-5">
+                            <div class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-secondary text-white flex items-center justify-center mr-2 transition-all duration-300">
+                                    <i class="fas fa-check text-xs"></i>
+                                </div>
+                                <span>Full coordination</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-secondary text-white flex items-center justify-center mr-2 transition-all duration-300">
+                                    <i class="fas fa-check text-xs"></i>
+                                </div>
+                                <span>Vendor management</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-secondary text-white flex items-center justify-center mr-2 transition-all duration-300">
+                                    <i class="fas fa-check text-xs"></i>
+                                </div>
+                                <span>Timeline creation</span>
+                            </div>
+                        </div>
+                        
+                        <a href="#wedding" class="btn-primary text-white font-semibold py-2 px-6 rounded-full inline-block text-sm">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Corporate Events -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 animate-fade-in-up" style="animation-delay: 0.2s">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1431540015161-0bf868a2e407?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Corporate Events" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-accent">Corporate Events</h3>
+                        <p class="text-gray-600 mb-4">Professional event solutions for conferences, product launches, and corporate celebrations.</p>
+                        
+                        <div class="space-y-3 mb-5">
+                            <div class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-secondary text-white flex items-center justify-center mr-2 transition-all duration-300">
+                                    <i class="fas fa-check text-xs"></i>
+                                </div>
+                                <span>Venue selection</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-secondary text-white flex items-center justify-center mr-2 transition-all duration-300">
+                                    <i class="fas fa-check text-xs"></i>
+                                </div>
+                                <span>AV equipment</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-secondary text-white flex items-center justify-center mr-2 transition-all duration-300">
+                                    <i class="fas fa-check text-xs"></i>
+                                </div>
+                                <span>Branding integration</span>
+                            </div>
+                        </div>
+                        
+                        <a href="#corporate" class="btn-primary text-white font-semibold py-2 px-6 rounded-full inline-block text-sm">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Private Parties -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 animate-fade-in-up" style="animation-delay: 0.4s">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Private Parties" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-accent">Private Parties</h3>
+                        <p class="text-gray-600 mb-4">Memorable celebrations for birthdays, anniversaries, and special occasions.</p>
+                        
+                        <div class="space-y-3 mb-5">
+                            <div class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-secondary text-white flex items-center justify-center mr-2 transition-all duration-300">
+                                    <i class="fas fa-check text-xs"></i>
+                                </div>
+                                <span>Theme customization</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-secondary text-white flex items-center justify-center mr-2 transition-all duration-300">
+                                    <i class="fas fa-check text-xs"></i>
+                                </div>
+                                <span>Entertainment coordination</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-secondary text-white flex items-center justify-center mr-2 transition-all duration-300">
+                                    <i class="fas fa-check text-xs"></i>
+                                </div>
+                                <span>Personalized service</span>
+                            </div>
+                        </div>
+                        
+                        <a href="#private" class="btn-primary text-white font-semibold py-2 px-6 rounded-full inline-block text-sm">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Additional Service -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 animate-fade-in-up" style="animation-delay: 0.6s">
+                    <div class="h-56 overflow-hidden bg-gradient-to-br from-secondary to-primary flex items-center justify-center">
+                        <i class="fas fa-plus-circle text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-accent">Custom Services</h3>
+                        <p class="text-gray-600 mb-4">Don't see what you need? We create custom solutions for any event requirement.</p>
+                        
+                        <div class="space-y-3 mb-5">
+                            <div class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-secondary text-white flex items-center justify-center mr-2 transition-all duration-300">
+                                    <i class="fas fa-check text-xs"></i>
+                                </div>
+                                <span>Tailored to your needs</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-secondary text-white flex items-center justify-center mr-2 transition-all duration-300">
+                                    <i class="fas fa-check text-xs"></i>
+                                </div>
+                                <span>Flexible packages</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-secondary text-white flex items-center justify-center mr-2 transition-all duration-300">
+                                    <i class="fas fa-check text-xs"></i>
+                                </div>
+                                <span>One-on-one consultation</span>
+                            </div>
+                        </div>
+                        
+                        <a href="contact.html" class="btn-primary text-white font-semibold py-2 px-6 rounded-full inline-block text-sm">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-gradient-to-br from-secondary to-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Plan Your <span class="text-white">Perfect Event</span>?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Contact us today to discuss how we can bring your vision to life</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="tel:+1234567890" class="bg-white text-primary font-semibold py-3 px-8 rounded-full inline-block">
+                    <i class="fas fa-phone mr-2"></i> Call Us Now
+                </a>
+                <a href="contact.html" class="border-2 border-white text-white font-semibold py-3 px-8 rounded-full inline-block hover:bg-white hover:text-primary transition">
+                    <i class="fas fa-envelope mr-2"></i> Send a Message
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 pt-20 pb-10">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-secondary to-primary flex items-center justify-center mr-2">
+                            <i class="fas fa-utensils text-white"></i>
+                        </div>
+                        <div class="text-xl font-bold text-white">Mpole's <span class="text-gradient">Events</span></div>
+                    </div>
+                    <p class="mb-4">Creating memorable experiences through exceptional event services since 2010.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 text-white flex items-center justify-center hover:bg-primary transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 text-white flex items-center justify-center hover:bg-primary transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 text-white flex items-center justify-center hover:bg-primary transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-4 pb-2 border-b border-gray-700">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-primary transition">Home</a></li>
+                        <li><a href="services.html" class="hover:text-primary transition">Services</a></li>
+                        <li><a href="about.html" class="hover:text-primary transition">About Us</a></li>
+                        <li><a href="gallery.html" class="hover:text-primary transition">Gallery</a></li>
+                        <li><a href="contact.html" class="hover:text-primary transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-4 pb-2 border-b border-gray-700">Our Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-primary transition">Wedding Catering</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Event Decorations</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Wedding Planning</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Corporate Events</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Private Parties</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-4 pb-2 border-b border-gray-700">Contact Info</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-primary mt-1 mr-3"></i>
+                            <span>123 Event Street, Johannesburg, South Africa</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-primary mr-3"></i>
+                            <span>+27 12 345 6789</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-primary mr-3"></i>
+                            <span>info@mpolesevents.co.za</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock text-primary mr-3"></i>
+                            <span>Mon-Fri: 9AM - 6PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-6 border-t border-gray-800 text-center">
+                <p class="mb-4">&copy; 2025 Mpole's Events. All rights reserved.</p>
+                <div class="flex justify-center space-x-6">
+                    <a href="#" class="hover:text-primary transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-primary transition">Terms of Service</a>
+                    <a href="#" class="hover:text-primary transition">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('button').addEventListener('click', function() {
+            const nav = document.querySelector('nav ul');
+            nav.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

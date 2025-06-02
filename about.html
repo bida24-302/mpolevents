@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About Us - Mpole's Events | Catering & Decoration Specialists</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .about-hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1555244162-803834f70033?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+       
+        .team-card {
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #fff5f5 0%, #fff0f0 100%);
+        }
+       
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(251, 182, 206, 0.3);
+        }
+       
+        .nav-link {
+            position: relative;
+        }
+       
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #f9a8d4;
+            transition: width 0.3s ease;
+        }
+       
+        .nav-link:hover::after {
+            width: 100%;
+        }
+       
+        .btn-primary {
+            background: linear-gradient(135deg, #f9a8d4 0%, #f472b6 100%);
+        }
+       
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #f472b6 0%, #f9a8d4 100%);
+        }
+       
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+       
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 60%;
+            height: 3px;
+            bottom: -8px;
+            left: 0;
+            background: linear-gradient(90deg, #f9a8d4 0%, #fbcfe8 50%, #f9a8d4 100%);
+            border-radius: 3px;
+        }
+       
+        /* Animation classes */
+        .animate-fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+       
+        .animate-fade-in.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+       
+        .animate-delay-1 {
+            transition-delay: 0.2s;
+        }
+       
+        .animate-delay-2 {
+            transition-delay: 0.4s;
+        }
+       
+        .animate-delay-3 {
+            transition-delay: 0.6s;
+        }
+       
+        /* Mobile menu styles */
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+        }
+       
+        .mobile-menu.open {
+            max-height: 500px;
+        }
+       
+        /* Floating animation */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+       
+        .floating {
+            animation: float 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="font-sans bg-pink-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-gradient-to-r from-pink-400 to-pink-600 rounded-full flex items-center justify-center mr-3 floating">
+                        <i class="fas fa-utensils text-white text-xl"></i>
+                    </div>
+                    <h1 class="text-2xl font-bold text-gray-800">Mpole's <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-pink-700">Events</span></h1>
+                </div>
+               
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-pink-500 font-medium">Home</a>
+                    <a href="services.html" class="nav-link text-gray-700 hover:text-pink-500 font-medium">Services</a>
+                    <a href="about.html" class="nav-link text-pink-500 font-medium">About Us</a>
+                    <a href="gallery.html" class="nav-link text-gray-700 hover:text-pink-500 font-medium">Gallery</a>
+                    <a href="contact.html" class="nav-link text-gray-700 hover:text-pink-500 font-medium">Contact</a>
+                </nav>
+               
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+           
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu md:hidden">
+                <div class="pt-4 pb-2 space-y-2">
+                    <a href="index.html" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-pink-50 hover:text-pink-500">Home</a>
+                    <a href="services.html" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-pink-50 hover:text-pink-500">Services</a>
+                    <a href="about.html" class="block px-3 py-2 rounded-md text-pink-500 bg-pink-50">About Us</a>
+                    <a href="gallery.html" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-pink-50 hover:text-pink-500">Gallery</a>
+                    <a href="contact.html" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-pink-50 hover:text-pink-500">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+   
+    <!-- Hero Section -->
+    <section class="about-hero min-h-[50vh] flex items-center justify-center text-center text-white px-4">
+        <div class="max-w-4xl mx-auto animate-fade-in">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Our <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-pink-500">Story</span></h2>
+            <p class="text-xl md:text-2xl mb-8 leading-relaxed">
+                A decade of crafting unforgettable events with passion, creativity, and exceptional service
+            </p>
+        </div>
+    </section>
+   
+    <!-- Our Journey -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="section-title text-3xl md:text-4xl font-bold text-gray-800 mb-4 animate-fade-in">
+                    Our <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-pink-600">Journey</span>
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto animate-fade-in animate-delay-1">
+                    From humble beginnings to becoming Botswana's premier event specialists
+                </p>
+            </div>
+           
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10 animate-fade-in">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                             alt="Our Beginnings"
+                             class="rounded-lg shadow-xl w-full h-auto object-cover">
+                        <div class="absolute -bottom-5 -left-5 bg-pink-500 text-white p-4 rounded-lg shadow-lg">
+                            <div class="text-2xl font-bold">2010</div>
+                            <div class="text-sm">Founded</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 animate-fade-in animate-delay-1">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">From Passion to Profession</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Mpole's Events began as a small home-based catering service in Gaborone, founded by Debbie Tsholofelo Mpole. What started as a passion for creating beautiful events for friends and family quickly grew into a full-fledged business as word spread about our exceptional food and attention to detail.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        In 2012, we expanded our services to include event decoration, recognizing that the complete event experience required both culinary excellence and stunning visual design. This holistic approach set us apart and became our signature offering.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Today, with over 500 events under our belt, we've grown into one of Botswana's most trusted event planning companies, known for our creativity, reliability, and personalized service.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <!-- Our Philosophy -->
+    <section class="py-20 bg-pink-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="section-title text-3xl md:text-4xl font-bold text-gray-800 mb-4 animate-fade-in">
+                    Our <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-pink-700">Philosophy</span>
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto animate-fade-in animate-delay-1">
+                    The principles that guide everything we do
+                </p>
+            </div>
+           
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-pink-300 animate-fade-in">
+                    <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-heart text-pink-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">Passion First</h3>
+                    <p class="text-gray-600 mb-4 text-center">
+                        We approach every event with genuine enthusiasm and care, treating each celebration as if it were our own. Our love for what we do shines through in every detail.
+                    </p>
+                </div>
+               
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-pink-300 animate-fade-in animate-delay-1">
+                    <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-lightbulb text-pink-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">Creative Excellence</h3>
+                    <p class="text-gray-600 mb-4 text-center">
+                        We believe in pushing boundaries while maintaining elegance. Our team stays inspired by global trends while honoring local traditions and personal tastes.
+                    </p>
+                </div>
+               
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-pink-300 animate-fade-in animate-delay-2">
+                    <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-hands-helping text-pink-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">Personal Connection</h3>
+                    <p class="text-gray-600 mb-4 text-center">
+                        Your event should reflect your unique story. We take time to understand your vision, preferences, and personality to create a truly personalized experience.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <!-- Meet the Team -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="section-title text-3xl md:text-4xl font-bold text-gray-800 mb-4 animate-fade-in">
+                    Meet Our <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-pink-600">Team</span>
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto animate-fade-in animate-delay-1">
+                    The passionate professionals who bring your events to life
+                </p>
+            </div>
+           
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="team-card p-8 rounded-xl shadow-md border-l-4 border-pink-400 animate-fade-in">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-pink-200">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80"
+                             alt="Debbie Tsholofelo Mpole"
+                             class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2 text-center">Debbie Tsholofelo Mpole</h3>
+                    <p class="text-pink-500 font-medium text-center mb-4">Founder & Creative Director</p>
+                    <p class="text-gray-600 mb-6 text-center">
+                        With over 13 years in the industry, Debbie's visionary approach and meticulous attention to detail set the standard for our team. She personally oversees every event to ensure perfection.
+                    </p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="text-pink-400 hover:text-pink-600">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-pink-400 hover:text-pink-600">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+               
+                <div class="team-card p-8 rounded-xl shadow-md border-l-4 border-pink-400 animate-fade-in animate-delay-1">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-pink-200">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+                             alt="Kagiso Motsumi"
+                             class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2 text-center">Kagiso Motsumi</h3>
+                    <p class="text-pink-500 font-medium text-center mb-4">Head Chef</p>
+                    <p class="text-gray-600 mb-6 text-center">
+                        Trained in South Africa and France, Kagiso brings international culinary expertise to our kitchen while incorporating authentic Botswana flavors into our menus.
+                    </p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="text-pink-400 hover:text-pink-600">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-pink-400 hover:text-pink-600">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+               
+                <div class="team-card p-8 rounded-xl shadow-md border-l-4 border-pink-400 animate-fade-in animate-delay-2">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-pink-200">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a05d6d090b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+                             alt="Lerato Dintwa"
+                             class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2 text-center">Lerato Dintwa</h3>
+                    <p class="text-pink-500 font-medium text-center mb-4">Event Designer</p>
+                    <p class="text-gray-600 mb-6 text-center">
+                        With an eye for color and composition, Lerato transforms venues into breathtaking spaces. Her floral arrangements and decor concepts consistently wow our clients.
+                    </p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="text-pink-400 hover:text-pink-600">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-pink-400 hover:text-pink-600">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="text-center mt-12 animate-fade-in animate-delay-3">
+                <a href="contact.html" class="btn-primary text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg">
+                    Meet the Full Team <i class="fas fa-users ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+   
+    <!-- Our Commitment -->
+    <section class="py-20 bg-pink-50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10 animate-fade-in">
+                    <h2 class="section-title text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                        Our <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-pink-700">Commitment</span>
+                    </h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        At Mpole's Events, we're committed to more than just beautiful events. We believe in sustainable practices that honor our community and environment.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-pink-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Sourcing 80% of our ingredients from local farmers and producers</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-pink-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Using biodegradable and reusable decor materials whenever possible</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-pink-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Donating excess food to local shelters and food banks</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-pink-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Investing in training programs for young Batswana in hospitality</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2 animate-fade-in animate-delay-1">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="rounded-lg overflow-hidden shadow-md">
+                            <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                 alt="Local Farmers"
+                                 class="w-full h-48 object-cover">
+                        </div>
+                        <div class="rounded-lg overflow-hidden shadow-md">
+                            <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
+                                 alt="Sustainable Decor"
+                                 class="w-full h-48 object-cover">
+                        </div>
+                        <div class="rounded-lg overflow-hidden shadow-md">
+                            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                 alt="Food Donation"
+                                 class="w-full h-48 object-cover">
+                        </div>
+                        <div class="rounded-lg overflow-hidden shadow-md">
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
+                                 alt="Training Programs"
+                                 class="w-full h-48 object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <!-- Call to Action -->
+    <section class="py-16 bg-gradient-to-r from-pink-500 to-pink-400 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 animate-fade-in">Ready to Create Something <span class="text-white">Extraordinary</span>?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto animate-fade-in animate-delay-1">
+                Let's discuss how we can make your next event truly unforgettable
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in animate-delay-2">
+                <a href="tel:+26772427343" class="bg-white hover:bg-gray-100 text-pink-600 font-bold py-3 px-8 rounded-full transition duration-300 shadow-md">
+                    <i class="fas fa-phone mr-2"></i> Call Us Now
+                </a>
+                <a href="contact.html" class="bg-transparent border-2 border-white hover:bg-white hover:text-pink-500 font-bold py-3 px-8 rounded-full transition duration-300">
+                    Send a Message <i class="fas fa-envelope ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+   
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="animate-fade-in">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-r from-pink-400 to-pink-600 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-utensils text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Mpole's <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-pink-300">Events</span></h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Creating memorable experiences through exceptional catering and decoration services since 2010.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-pink-400 transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-pink-400 transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-pink-400 transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-pink-400 transition duration-300">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                    </div>
+                </div>
+               
+                <div class="animate-fade-in animate-delay-1">
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-pink-400 transition duration-300">Home</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-pink-400 transition duration-300">Services</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-pink-400 transition duration-300">About Us</a></li>
+                        <li><a href="gallery.html" class="text-gray-400 hover:text-pink-400 transition duration-300">Gallery</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-pink-400 transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+               
+                <div class="animate-fade-in animate-delay-2">
+                    <h4 class="text-lg font-semibold mb-4">Our Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-pink-400 transition duration-300">Wedding Catering</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-400 transition duration-300">Event Decorations</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-400 transition duration-300">Corporate Events</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-400 transition duration-300">Private Parties</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-400 transition duration-300">Full Event Planning</a></li>
+                    </ul>
+                </div>
+               
+                <div class="animate-fade-in animate-delay-3">
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-pink-400 mt-1 mr-3"></i>
+                            <span class="text-gray-400">Plot 7812 Muchudi, Botswana</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-pink-400 mr-3"></i>
+                            <span class="text-gray-400">+267 72427343</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-pink-400 mr-3"></i>
+                            <span class="text-gray-400">debbietsholofelo@gmail.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock text-pink-400 mr-3"></i>
+                            <span class="text-gray-400">Mon-Fri: 9AM - 6PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+           
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0 animate-fade-in">
+                    &copy; 2025 Mpole's Events. All rights reserved.
+                </p>
+                <div class="flex space-x-6 animate-fade-in animate-delay-1">
+                    <a href="#" class="text-gray-400 hover:text-pink-400 transition duration-300">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-pink-400 transition duration-300">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-pink-400 transition duration-300">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+   
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-pink-500 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition duration-300 opacity-0 invisible hover:bg-pink-600">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+   
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+       
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('open');
+        });
+       
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+       
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+       
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+       
+        // Scroll animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateElements = document.querySelectorAll('.animate-fade-in');
+           
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+           
+            animateElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>

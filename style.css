@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mpole's Events Newsletter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fafafa;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #f9a8d4 0%, #f472b6 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .newsletter-container {
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .header-image {
+            height: 200px;
+            background-image: url('https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .featured-event {
+            height: 250px;
+            background-image: url('https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .event-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            padding: 20px;
+            color: white;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 5px;
+        }
+        
+        .promo-banner {
+            background: linear-gradient(135deg, #f9a8d4 0%, #f472b6 100%);
+            color: white;
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-bottom-color: #f472b6;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .footer {
+            background-color: #2d3748;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 py-10">
+    <!-- Newsletter Container -->
+    <div class="newsletter-container bg-white rounded-lg overflow-hidden">
+        <!-- Header -->
+        <div class="header-image relative">
+            <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                <div class="text-center px-4">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-r from-pink-300 to-pink-500 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-utensils text-white text-2xl"></i>
+                    </div>
+                    <h1 class="text-3xl font-bold text-white">Mpole's <span class="gradient-text">Events</span></h1>
+                    <p class="text-white mt-2">Monthly Newsletter • June 2023</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Greeting Section -->
+        <div class="px-8 py-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Hello Valued Clients!</h2>
+            <p class="text-gray-600 mb-6">
+                We're excited to share our latest updates, upcoming events, and special offers with you this month. 
+                From stunning wedding decor to corporate catering that will impress your guests, we've got you covered!
+            </p>
+            <div class="border-t border-b border-gray-200 py-4 my-4">
+                <p class="text-sm text-gray-500 italic">
+                    "Mpole's Events transformed our wedding into a fairy tale! The attention to detail was incredible." 
+                    <span class="block font-medium mt-1">- Thandi & Sipho</span>
+                </p>
+            </div>
+        </div>
+        
+        <!-- Promo Banner -->
+        <div class="promo-banner px-8 py-6 text-center">
+            <h3 class="text-xl font-bold mb-2">Summer Special!</h3>
+            <p class="mb-4">Book any event in June or July and receive 15% off our premium package</p>
+            <a href="#" class="inline-block bg-white text-pink-600 font-bold px-6 py-2 rounded-full hover:bg-gray-100 transition">
+                Claim Offer <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+        
+        <!-- Featured Event -->
+        <div class="px-8 py-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Featured Event of the Month</h2>
+            <div class="featured-event rounded-lg overflow-hidden">
+                <div class="event-overlay">
+                    <h3 class="text-xl font-bold">Lerato & Thabo's Wedding</h3>
+                    <p class="text-sm">June 10, 2023 • Johannesburg</p>
+                </div>
+            </div>
+            <p class="text-gray-600 mt-4">
+                Our team created a breathtaking rose gold and blush pink theme for this beautiful couple's special day. 
+                From the floral arrangements to the custom dessert table, every detail was carefully crafted.
+            </p>
+            <a href="#" class="inline-block text-pink-600 font-medium mt-4 hover:underline">
+                View Gallery <i class="fas fa-images ml-2"></i>
+            </a>
+        </div>
+        
+        <!-- Services Showcase -->
+        <div class="px-8 py-8 bg-gray-50">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Service 1 -->
+                <div class="service-card bg-white p-6 rounded-lg shadow-sm">
+                    <div class="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center text-pink-600 mb-4">
+                        <i class="fas fa-glass-cheers text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Wedding Planning</h3>
+                    <p class="text-gray-600 text-sm">
+                        Full-service wedding planning from concept to execution. Let us handle the details while you enjoy your engagement.
+                    </p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white p-6 rounded-lg shadow-sm">
+                    <div class="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center text-pink-600 mb-4">
+                        <i class="fas fa-utensils text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Gourmet Catering</h3>
+                    <p class="text-gray-600 text-sm">
+                        Custom menus for any occasion. Our chefs create culinary experiences that delight all palates.
+                    </p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white p-6 rounded-lg shadow-sm">
+                    <div class="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center text-pink-600 mb-4">
+                        <i class="fas fa-palette text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Event Decor</h3>
+                    <p class="text-gray-600 text-sm">
+                        Transform any venue into a magical space with our creative decor solutions and floral designs.
+                    </p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-white p-6 rounded-lg shadow-sm">
+                    <div class="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center text-pink-600 mb-4">
+                        <i class="fas fa-briefcase text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Corporate Events</h3>
+                    <p class="text-gray-600 text-sm">
+                        Professional event planning for conferences, galas, and corporate functions that make an impression.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Upcoming Events -->
+        <div class="px-8 py-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Upcoming Events</h2>
+            <div class="space-y-4">
+                <!-- Event 1 -->
+                <div class="flex items-start">
+                    <div class="bg-pink-100 text-pink-600 rounded-lg p-3 mr-4">
+                        <div class="text-center">
+                            <div class="font-bold text-lg">15</div>
+                            <div class="text-xs uppercase">Jun</div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-bold">Summer Wedding Expo</h3>
+                        <p class="text-gray-600 text-sm">Johannesburg Convention Center • 10AM-6PM</p>
+                        <a href="#" class="text-pink-600 text-sm font-medium inline-block mt-1">Learn More →</a>
+                    </div>
+                </div>
+                
+                <!-- Event 2 -->
+                <div class="flex items-start">
+                    <div class="bg-pink-100 text-pink-600 rounded-lg p-3 mr-4">
+                        <div class="text-center">
+                            <div class="font-bold text-lg">22</div>
+                            <div class="text-xs uppercase">Jun</div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-bold">Corporate Catering Showcase</h3>
+                        <p class="text-gray-600 text-sm">Sandton City • 9AM-4PM</p>
+                        <a href="#" class="text-pink-600 text-sm font-medium inline-block mt-1">Learn More →</a>
+                    </div>
+                </div>
+                
+                <!-- Event 3 -->
+                <div class="flex items-start">
+                    <div class="bg-pink-100 text-pink-600 rounded-lg p-3 mr-4">
+                        <div class="text-center">
+                            <div class="font-bold text-lg">30</div>
+                            <div class="text-xs uppercase">Jun</div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-bold">Floral Design Workshop</h3>
+                        <p class="text-gray-600 text-sm">Mpole's Events Studio • 2PM-5PM</p>
+                        <a href="#" class="text-pink-600 text-sm font-medium inline-block mt-1">RSVP Now →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Testimonial -->
+        <div class="px-8 py-8 bg-pink-50">
+            <div class="text-center">
+                <i class="fas fa-quote-left text-pink-300 text-3xl mb-4"></i>
+                <p class="text-gray-700 italic text-lg mb-4">
+                    "Working with Mpole's Events was the best decision we made for our wedding. Their team anticipated 
+                    every need and created a day more beautiful than we could have imagined."
+                </p>
+                <div class="flex items-center justify-center">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Happy Client" class="w-12 h-12 rounded-full mr-3">
+                    <div>
+                        <div class="font-bold">Nomsa K.</div>
+                        <div class="text-sm text-gray-600">May 2023 Bride</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Call to Action -->
+        <div class="px-8 py-8 text-center">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Ready to Plan Your Event?</h2>
+            <p class="text-gray-600 mb-6 max-w-md mx-auto">
+                Contact us today to schedule a consultation and let's create something extraordinary together!
+            </p>
+            <a href="#" class="inline-block bg-gradient-to-r from-pink-300 to-pink-500 text-white font-bold px-8 py-3 rounded-full hover:from-pink-400 hover:to-pink-600 transition">
+                Book a Consultation <i class="fas fa-calendar-check ml-2"></i>
+            </a>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer px-8 py-8 text-center">
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="social-icon bg-gray-700 text-white hover:bg-pink-500">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon bg-gray-700 text-white hover:bg-pink-500">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-icon bg-gray-700 text-white hover:bg-pink-500">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-icon bg-gray-700 text-white hover:bg-pink-500">
+                    <i class="fab fa-pinterest-p"></i>
+                </a>
+            </div>
+            <p class="text-gray-400 text-sm mb-2">
+                123 Event Street, Johannesburg, South Africa
+            </p>
+            <p class="text-gray-400 text-sm mb-4">
+                Phone: +27 12 345 6789 • Email: info@mpolesevents.co.za
+            </p>
+            <p class="text-gray-500 text-xs">
+                &copy; 2023 Mpole's Events. All rights reserved.
+            </p>
+            <p class="text-gray-500 text-xs mt-2">
+                <a href="#" class="underline">Unsubscribe</a> | <a href="#" class="underline">Update Preferences</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

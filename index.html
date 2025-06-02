@@ -1,445 +1,314 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Neo Health and Wellness Clinic</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #FFF9F2;
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
-    .header {
-      background-color: #FF7B25;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-    .hero {
-      background: linear-gradient(rgba(255, 123, 37, 0.8), rgba(255, 123, 37, 0.8)),
-        url('skipa.jpg');
-      background-size: cover;
-      background-position: center;
-      color: white;
-      text-align: center;
-      padding: 6rem 2rem;
-    }
-    .btn {
-      display: inline-block;
-      background-color: white;
-      color: #FF7B25;
-      padding: 0.75rem 2rem;
-      border-radius: 50px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-    .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    }
-    .service-card {
-      transition: all 0.3s ease;
-      border-radius: 12px;
-      overflow: hidden;
-    }
-    .service-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 15px 30px rgba(255, 123, 37, 0.2);
-    }
-    .founder-card {
-      background: linear-gradient(135deg, #FF7B25 0%, #FF9A56 100%);
-      border-radius: 12px;
-      overflow: hidden;
-    }
-    .role-item {
-      position: relative;
-      padding-left: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
-    .role-item:before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      color: #FF7B25;
-      font-weight: bold;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome to Mpole's Events - Elegant Catering & Decoration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('food.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #fff5f5 0%, #fff0f0 100%);
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(251, 182, 206, 0.3);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #f9a8d4;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #f9a8d4 0%, #f472b6 100%);
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #f472b6 0%, #f9a8d4 100%);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(135deg, #fbcfe8 0%, #f9a8d4 100%);
+        }
+        
+        .btn-secondary:hover {
+            background: linear-gradient(135deg, #f9a8d4 0%, #fbcfe8 100%);
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 60%;
+            height: 3px;
+            bottom: -8px;
+            left: 0;
+            background: linear-gradient(90deg, #f9a8d4 0%, #fbcfe8 50%, #f9a8d4 100%);
+            border-radius: 3px;
+        }
+    </style>
 </head>
-<body>
+<body class="font-sans bg-pink-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-gradient-to-r from-pink-400 to-pink-600 rounded-full flex items-center justify-center mr-3">
+                        <i class="fas fa-utensils text-white text-xl"></i>
+                    </div>
+                    <h1 class="text-2xl font-bold text-gray-800">Mpole's <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-pink-700">Events</span></h1>
+                </div>
+                
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-pink-500 font-medium">Home</a>
+                    <a href="services.html" class="nav-link text-gray-700 hover:text-pink-500 font-medium">Services</a>
+                    <a href="about.html" class="nav-link text-gray-700 hover:text-pink-500 font-medium">About Us</a>
+                    <a href="gallery.html" class="nav-link text-gray-700 hover:text-pink-500 font-medium">Gallery</a>
+                    <a href="contact.html" class="nav-link text-gray-700 hover:text-pink-500 font-medium">Contact</a>
+                </nav>
+                
+                <div class="md:hidden">
+                    <button class="text-gray-700 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
 
-  <header class="header p-4 bg-orange-500">
-    <div class="container mx-auto flex items-center justify-between flex-wrap">
-         <!-- Logo Section -->
-<div class="logo w-28 h-28 rounded-full overflow-hidden border-4 border-white shadow-2xl bg-white flex items-center justify-center">
-    <img src="neo logo.jpg" alt="Neo Health and Wellness Centre Logo" class="max-w-[90%] max-h-[90%] object-contain" />
-</div>
-        
-        <!-- Mobile Menu Button -->
-        <button id="menu-toggle" class="md:hidden text-white text-3xl focus:outline-none">
-            ☰
-        </button>
-        
-        <!-- Navigation Menu -->
-        <nav id="nav-menu" class="w-full md:w-auto md:flex hidden flex-col md:flex-row gap-4 mt-4 md:mt-0 text-white font-medium">
-            <ul class="flex flex-col md:flex-row gap-4">
-                <li><a href="index.html" class="hover:bg-white hover:text-orange-500 px-3 py-1 rounded">Home</a></li>
-                <li><a href="about.html" class="hover:bg-white hover:text-orange-500 px-3 py-1 rounded">About Us</a></li>
-                <li><a href="services.html" class="hover:bg-white hover:text-orange-500 px-3 py-1 rounded">Services</a></li>
-                <li><a href="contact.html" class="hover:bg-white hover:text-orange-500 px-3 py-1 rounded">Contact Us</a></li>
-                <li><a href="appointment.html" class="hover:bg-white hover:text-orange-500 px-3 py-1 rounded">Book Appointment</a></li>
-                <li><a href="feedback.html" class="hover:bg-white hover:text-orange-500 px-3 py-1 rounded">Feedback</a></li>
-                <li><a href="team.html" class="hover:bg-white hover:text-orange-500 px-3 py-1 rounded">Our Team</a></li>
-                <li><a href="refer.html" class="hover:bg-white hover:text-orange-500 px-3 py-1 rounded">Refer A Patient</a></li>
-            </ul>
-        </nav>
-    </div>
-    
-    <!-- Toggle Script -->
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center justify-center text-center text-white px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">Your Dream Event, <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-pink-500">Perfectly Styled</span></h2>
+            <p class="text-xl md:text-2xl mb-8 leading-relaxed">From intimate gatherings to grand celebrations, we craft unforgettable experiences through exquisite catering and breathtaking decorations.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="services.html" class="btn-primary text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                    Explore Services <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+                <a href="contact.html" class="bg-transparent border-2 border-white hover:bg-white hover:text-pink-600 text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                    Get a Quote
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <img src="chefff.jpeg" 
+                         alt="Catering Service" 
+                         class="rounded-lg shadow-xl w-full h-auto object-cover">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="section-title text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                        Crafting <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-pink-600">Memorable</span> Experiences
+                    </h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        At Mpole's Events, we blend culinary artistry with creative design to transform your vision into reality. Our decade-long journey has been dedicated to perfecting the art of celebration, one event at a time.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Whether it's a wedding that tells your love story, a corporate event that impresses, or a birthday that delights, our team of passionate professionals ensures every detail reflects your personality and exceeds expectations.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="about.html" class="btn-primary text-white font-bold py-3 px-6 rounded-full transition duration-300 shadow-md">
+                            Our Story <i class="fas fa-book-open ml-2"></i>
+                        </a>
+                        <a href="gallery.html" class="btn-secondary text-white font-bold py-3 px-6 rounded-full transition duration-300 shadow-md">
+                            View Gallery <i class="fas fa-images ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Highlights -->
+    <section class="py-20 bg-pink-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="section-title text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    Our <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-pink-700">Signature</span> Services
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Comprehensive solutions tailored to make your event seamless and spectacular
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-pink-300">
+                    <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-utensils text-pink-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Gourmet Catering</h3>
+                    <p class="text-gray-600 mb-4">
+                        From canapés to five-course meals, our culinary team creates flavors that delight every palate with locally-sourced, seasonal ingredients.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-pink-300">
+                    <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-paint-brush text-pink-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Event Design</h3>
+                    <p class="text-gray-600 mb-4">
+                        Transform your venue into a breathtaking space with our custom floral arrangements, lighting designs, and thematic decor concepts.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-pink-300">
+                    <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-calendar-check text-pink-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Full Planning</h3>
+                    <p class="text-gray-600 mb-4">
+                        Comprehensive event coordination including vendor management, timeline creation, and on-site execution for stress-free celebrations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="animate-fade-in">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-r from-pink-400 to-pink-600 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-utensils text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Mpole's <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-pink-300">Events</span></h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Creating memorable experiences through exceptional catering and decoration services since 2010.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-pink-400 transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-pink-400 transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-pink-400 transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-pink-400 transition duration-300">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                    </div>
+                </div>
+               
+                <div class="animate-fade-in animate-delay-1">
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-pink-400 transition duration-300">Home</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-pink-400 transition duration-300">Services</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-pink-400 transition duration-300">About Us</a></li>
+                        <li><a href="gallery.html" class="text-gray-400 hover:text-pink-400 transition duration-300">Gallery</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-pink-400 transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+               
+                <div class="animate-fade-in animate-delay-2">
+                    <h4 class="text-lg font-semibold mb-4">Our Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-pink-400 transition duration-300">Wedding Catering</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-400 transition duration-300">Event Decorations</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-400 transition duration-300">Corporate Events</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-400 transition duration-300">Private Parties</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-400 transition duration-300">Full Event Planning</a></li>
+                    </ul>
+                </div>
+               
+                <div class="animate-fade-in animate-delay-3">
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-pink-400 mt-1 mr-3"></i>
+                            <span class="text-gray-400">Plot 7812 Muchudi, Botswana</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-pink-400 mr-3"></i>
+                            <span class="text-gray-400">+267 72427343</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-pink-400 mr-3"></i>
+                            <span class="text-gray-400">debbietsholofelo@gmail.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock text-pink-400 mr-3"></i>
+                            <span class="text-gray-400">Mon-Fri: 9AM - 6PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+           
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0 animate-fade-in">
+                    &copy; 2025 Mpole's Events. All rights reserved.
+                </p>        
+    </footer>
+
     <script>
-        const toggleButton = document.getElementById('menu-toggle');
-        const navMenu = document.getElementById('nav-menu');
-        
-        toggleButton.addEventListener('click', () => {
-            navMenu.classList.toggle('hidden');
+        // Simple animation for elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateElements = document.querySelectorAll('.animate-fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            animateElements.forEach(element => {
+                element.classList.add('opacity-0', 'translate-y-10', 'transition', 'duration-500', 'ease-out');
+                observer.observe(element);
+            });
+            
+            // Mobile menu toggle would go here
+            const mobileMenuButton = document.querySelector('.md\\:hidden button');
+            mobileMenuButton.addEventListener('click', function() {
+                // Implement mobile menu toggle functionality
+                console.log('Mobile menu clicked');
+            });
         });
     </script>
-</header>
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="max-w-4xl mx-auto">
-      <h1 class="text-4xl md:text-5xl font-bold mb-6">Welcome to Neo Health and Wellness Clinic</h1>
-      <p class="text-lg md:text-xl mb-8">Compassionate, comprehensive care for your health and wellness journey.</p>
-      <div class="flex flex-wrap gap-4 justify-center">
-        <a href="appointment.html" class="btn">Book an Appointment</a>
-        <a href="services.html" class="btn bg-transparent border-2 border-white text-white hover:bg-white hover:text-orange-500">Our Services</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section class="py-16 px-4 max-w-6xl mx-auto">
-    <div class="text-center mb-16">
-      <span class="text-orange-500 font-semibold">OUR SERVICES</span>
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2 mb-4">Comprehensive Healthcare for You</h2>
-      <div class="w-24 h-1 bg-orange-500 mx-auto"></div>
-    </div>
-
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16">
-      <!-- Wound Care -->
-      <div class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition">
-        <div class="flex items-center mb-6">
-          <div class="bg-orange-100 p-3 rounded-full mr-4">
-            <i class="fas fa-band-aid text-orange-500 text-3xl"></i>
-          </div>
-          <h3 class="text-2xl font-semibold text-gray-800">Wound Care</h3>
-        </div>
-        <p class="text-gray-600">
-          Our specialized wound care services focus on the treatment and management of chronic and acute wounds. We use the latest technologies and methods to ensure optimal healing.
-        </p>
-      </div>
-
-      <!-- Ostomy Care -->
-      <div class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition">
-        <div class="flex items-center mb-6">
-          <div class="bg-orange-100 p-3 rounded-full mr-4">
-            <i class="fas fa-stethoscope text-orange-500 text-3xl"></i>
-          </div>
-          <h3 class="text-2xl font-semibold text-gray-800">Ostomy Care</h3>
-        </div>
-        <p class="text-gray-600">
-          We provide expert care and support for patients with ostomy needs. Our team offers personalized education and advice on managing stomas and maintaining comfort.
-        </p>
-      </div>
-
-      <!-- Continence Care -->
-      <div class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition">
-        <div class="flex items-center mb-6">
-          <div class="bg-orange-100 p-3 rounded-full mr-4">
-            <i class="fas fa-toilet-paper text-orange-500 text-3xl"></i>
-          </div>
-          <h3 class="text-2xl font-semibold text-gray-800">Continence Care</h3>
-        </div>
-        <p class="text-gray-600">
-          Our continence care services include assessments and treatments for urinary incontinence and other related conditions, aimed at restoring quality of life for our patients.
-        </p>
-      </div>
-    </div>
-    <div class="text-center mt-12">
-      <a href="services.html" class="btn bg-orange-500 text-white hover:bg-orange-600">View All Services</a>
-    </div>
-  </section>
-
-  <!-- Founder Section -->
-  <section class="py-20 px-4 bg-gray-50">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-orange-500 mb-4">Meet Our Founder</h2>
-        <p class="max-w-2xl mx-auto text-gray-600">The visionary behind Neo Health and Wellness Clinic</p>
-      </div>
-      <div class="flex flex-col lg:flex-row items-center gap-12">
-        <div class="lg:w-1/3">
-          <div class="founder-card p-1">
-            <img src="best.jpg" alt="Neo Monwela" class="w-full h-auto rounded-lg" />
-          </div>
-        </div>
-        <div class="lg:w-2/3">
-          <h3 class="text-2xl font-bold text-gray-800 mb-4">Neo Monwela</h3>
-          <h4 class="text-xl text-orange-500 mb-6">Clinical Director – Neo Health & Wellness Center</h4>
-          
-          <div class="bg-white p-6 rounded-lg shadow-md mb-8">
-            <h3 class="text-xl font-semibold text-gray-800 mb-4">About</h3>
-            <p class="text-gray-600 mb-6">
-              A dedicated and experienced healthcare professional with deep expertise in wound care, ostomy, and continence management. Founder and Clinical Director of <strong>Neo Health & Wellness Center</strong> in Gaborone, Botswana, with a strong track record in clinical leadership, public health, and medical education. Passionate about improving health outcomes, mentoring future health professionals, and leading impactful community health initiatives.
-            </p>
-            <div class="flex items-center">
-              <i class="fas fa-map-marker-alt text-orange-500 mr-2"></i>
-              <span class="text-gray-600">Based in Gaborone, Botswana</span>
-            </div>
-          </div>
-          
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="bg-white p-6 rounded-lg shadow-md">
-              <h3 class="text-xl font-semibold text-gray-800 mb-4">Current Roles</h3>
-              <ul class="space-y-2">
-                <li class="role-item">Clinical Director – Neo Health & Wellness Center</li>
-                <li class="role-item">Executive Secretary – Botswana HIV Clinicians Society</li>
-                <li class="role-item">Lecturer – Institute of Health Sciences, Gaborone</li>
-                <li class="role-item">Executive Committee Member – Botswana HIV Clinicians Society</li>
-                <li class="role-item">President – Volunteers Network for Global Change Association</li>
-                <li class="role-item">Wound Care Practitioner – Wound Direct Clinic (Self-Employed)</li>
-              </ul>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-md">
-              <h3 class="text-xl font-semibold text-gray-800 mb-4">Previous Roles & Leadership</h3>
-              <ul class="space-y-2">
-                <li class="role-item">Deputy Executive Secretary – Botswana HIV Clinicians Society</li>
-                <li class="role-item">Lecturer – Ministry of Education, Skills and Development</li>
-                <li class="role-item">Lecturer – Ministry of Higher Education, Botswana</li>
-                <li class="role-item">Former Lecturer – Ministry of Health, Botswana</li>
-                <li class="role-item">Former Chairperson – Health and Wellness Committee, IHS Lobatse</li>
-                <li class="role-item">Former Vice President – JCI Botswana</li>
-                <li class="role-item">Former Immediate Past President – JCI Lobatse</li>
-              </ul>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-md md:col-span-2">
-              <h3 class="text-xl font-semibold text-gray-800 mb-4">Education</h3>
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div class="flex items-center">
-                  <div class="bg-orange-100 p-3 rounded-full mr-4">
-                    <i class="fas fa-graduation-cap text-orange-500"></i>
-                  </div>
-                  <div>
-                    <h4 class="font-semibold text-gray-800">University of Pretoria</h4>
-                  </div>
-                </div>
-                <div class="flex items-center">
-                  <div class="bg-orange-100 p-3 rounded-full mr-4">
-                    <i class="fas fa-graduation-cap text-orange-500"></i>
-                  </div>
-                  <div>
-                    <h4 class="font-semibold text-gray-800">Institute of Health Sciences, Lobatse</h4>
-                  </div>
-                </div>
-                <div class="flex items-center">
-                  <div class="bg-orange-100 p-3 rounded-full mr-4">
-                    <i class="fas fa-graduation-cap text-orange-500"></i>
-                  </div>
-                  <div>
-                    <h4 class="font-semibold text-gray-800">Lotsane Senior School</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="mt-8">
-            <a href="team.html" class="btn bg-orange-500 text-white hover:bg-orange-600">Meet Our Full Team</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section class="py-20 px-4 bg-white">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
-      <div class="md:w-1/2">
-        <img src="mom.jpg" alt="Our Clinic" class="rounded-lg shadow-xl w-full" />
-      </div>
-      <div class="md:w-1/2">
-        <h2 class="text-3xl font-bold text-orange-500 mb-4">About Neo Health and Wellness Clinic</h2>
-        <p class="text-gray-600 mb-6">Established in 2015, Neo Health and Wellness Clinic has grown from a small practice to a comprehensive healthcare center serving thousands of patients annually. Our mission is to provide personalized, compassionate care that addresses not just physical health, but emotional and social well-being too.</p>
-        
-        <div class="space-y-4 mb-8">
-          <div class="flex items-start">
-            <div class="bg-orange-100 p-2 rounded-full mr-4">
-              <i class="fas fa-check text-orange-500"></i>
-            </div>
-            <div>
-              <h4 class="font-semibold text-gray-800">Patient-Centered Approach</h4>
-              <p class="text-gray-600">We listen to understand your unique health needs and goals.</p>
-            </div>
-          </div>
-          <div class="flex items-start">
-            <div class="bg-orange-100 p-2 rounded-full mr-4">
-              <i class="fas fa-check text-orange-500"></i>
-            </div>
-            <div>
-              <h4 class="font-semibold text-gray-800">Cutting-Edge Technology</h4>
-              <p class="text-gray-600">State-of-the-art equipment for accurate diagnosis and treatment.</p>
-            </div>
-          </div>
-          <div class="flex items-start">
-            <div class="bg-orange-100 p-2 rounded-full mr-4">
-              <i class="fas fa-check text-orange-500"></i>
-            </div>
-            <div>
-              <h4 class="font-semibold text-gray-800">Holistic Wellness</h4>
-              <p class="text-gray-600">Integrating traditional medicine with complementary therapies.</p>
-            </div>
-          </div>
-        </div>
-        
-        <a href="about.html" class="btn bg-orange-500 text-white hover:bg-orange-600">Learn More About Us</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials Section -->
-  <section class="py-20 px-4 bg-gray-50">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-orange-500 mb-4">Patient Testimonials</h2>
-        <p class="max-w-2xl mx-auto text-gray-600">Hear what our patients say about their experiences</p>
-      </div>
-      
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Testimonial 1 -->
-        <div class="bg-white p-8 rounded-lg shadow-md">
-          <div class="flex items-center mb-4">
-            <img src="mokgaks.jpg" alt="Patient" class="w-12 h-12 rounded-full mr-4" />
-            <div>
-              <h4 class="font-semibold">Mandla Keamorata</h4>
-              <p class="text-gray-500 text-sm">Wound Care Patient</p>
-            </div>
-          </div>
-          <p class="text-gray-600 mb-4">"The wound care I received at Neo Health was exceptional. The team took the time to really understand my condition and developed a treatment plan that worked perfectly for me."</p>
-          <div class="flex text-orange-400">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-          </div>
-        </div>
-        
-        <!-- Testimonial 2 -->
-        <div class="bg-white p-8 rounded-lg shadow-md">
-          <div class="flex items-center mb-4">
-            <img src="jordan.jpg" alt="Patient" class="w-12 h-12 rounded-full mr-4" />
-            <div>
-              <h4 class="font-semibold">Jrdan Onkabetse</h4>
-              <p class="text-gray-500 text-sm">Ostomy Care Patient</p>
-            </div>
-          </div>
-          <p class="text-gray-600 mb-4">"After my ostomy surgery, the team at Neo Health helped me adjust to my new normal with compassion and expertise. Their support made all the difference in my recovery."</p>
-          <div class="flex text-orange-400">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-          </div>
-        </div>
-        
-        <!-- Testimonial 3 -->
-        <div class="bg-white p-8 rounded-lg shadow-md">
-          <div class="flex items-center mb-4">
-            <img src="misstee.jpg" alt="Patient" class="w-12 h-12 rounded-full mr-4" />
-            <div>
-              <h4 class="font-semibold">Tlhalefo Monabane</h4>
-              <p class="text-gray-500 text-sm">Continence Care Patient</p>
-            </div>
-          </div>
-          <p class="text-gray-600 mb-4">"The continence care program at Neo Health has dramatically improved my quality of life. The staff is knowledgeable, patient, and truly cares about their patients."</p>
-          <div class="flex text-orange-400">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer class="bg-gray-900 text-white pt-12 pb-8">
-    <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-            <div>
-                <img src="neo logo.jpg" alt="Neo Health Logo" class="h-12 mb-4">
-                <p class="text-gray-400">Compassionate care for wound management, ostomy care, and continence care in Gaborone, Botswana.</p>
-            </div>
-            
-            <div>
-                <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-                <ul class="space-y-2">
-                    <li><a href="index.html" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
-                    <li><a href="about.html" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
-                    <li><a href="services.html" class="text-gray-400 hover:text-white transition duration-300">Services</a></li>
-                    <li><a href="team.html" class="text-gray-400 hover:text-white transition duration-300">Our Team</a></li>
-                    <li><a href="contact.html" class="text-gray-400 hover:text-white transition duration-300">Contact Us</a></li>
-                </ul>
-            </div>
-            
-            <div>
-                <h3 class="text-lg font-semibold mb-4">Services</h3>
-                <ul class="space-y-2">
-                    <li><a href="wound-care.html" class="text-gray-400 hover:text-white transition duration-300">Wound Care</a></li>
-                    <li><a href="ostomy-care.html" class="text-gray-400 hover:text-white transition duration-300">Ostomy Care</a></li>
-                    <li><a href="professional nursing.html" class="text-gray-400 hover:text-white transition duration-300">Nursing Services</a></li>
-                    <li><a href="continence-care.html" class="text-gray-400 hover:text-white transition duration-300">Continence Care</a></li>
-                </ul>
-            </div>
-            
-            <div>
-                <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
-                <ul class="space-y-3 text-gray-400">
-                    <li class="flex items-start">
-                        <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
-                        <span>Gaborone West Plot 16424<br>Nossop Cres, Gaborone West Ext 48<br>Botswana</span>
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-phone-alt mr-3"></i>
-                        <a href="tel:+26771823042" class="hover:text-white transition duration-300">+267 71 823 042</a>
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-envelope mr-3"></i>
-                        <a href="mailto:neohealth.wellnesscenter@gmail.com" class="hover:text-white transition duration-300">neohealth.wellnesscenter@gmail.com</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p class="text-gray-400 mb-4 md:mb-0">© 2025 Neo Health and Wellness Center. All rights reserved.</p>
-            <div class="flex space-x-6">
-                <a href="privacy.html" class="text-gray-400 hover:text-white transition duration-300 text-sm">Privacy Policy</a>
-                <a href="terms.html" class="text-gray-400 hover:text-white transition duration-300 text-sm">Terms of Service</a>
-                <a href="accessibility.html" class="text-gray-400 hover:text-white transition duration-300 text-sm">Accessibility</a>
-            </div>
-        </div>
-    </div>
-</footer>
-
 </body>
 </html>
